@@ -3,7 +3,7 @@ import rospy
 from std_msgs.msg import String
 
 def main():
-    publisher = rospy.Publisher("testTopic", String, queue_size = 10)
+    publisher = rospy.Publisher("/testTopic", String, queue_size = 10)
     rospy.init_node("testNode", anonymous=True)
     rospy.loginfo("Initiated Test Node")
     if not(rospy.is_shutdown()):
